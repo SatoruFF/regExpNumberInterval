@@ -1,0 +1,1 @@
+# This is an assistant for translating intervals into regular expression values
