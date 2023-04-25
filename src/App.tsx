@@ -11,6 +11,9 @@ function App() {
 
   const handleCheck = () => {
     try {
+      if (!start || !end) {
+        return message.error('Возможно некторые строки не заполнены')
+      }
       if (start && end) {
         const value = trigger(+start, +end)
         setResult(value)
