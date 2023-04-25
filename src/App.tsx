@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="wrapper">
       <div className="content">
-        <div className="title">RegExp checker</div>
+        <div className="title">RegEx checker</div>
         <div className="description">Введите диапазон чисел</div>
         <div className="inputs">
           <Input className='input' placeholder='Введите начало диапазона тут' value={start} onChange={(e) => setStart(e.target.value)}/>
