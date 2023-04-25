@@ -219,7 +219,7 @@ export function trigger(start: number, end: number) {
     
     constructor (start: number = 0, end: number = 0, leadingString: string = '') {   
       if (start > end || start < 0) {
-        throw new RangeError('диапазон классов: начальное значение не может быть больше конечного значения и должно быть положительным диапазоном');
+        throw new RangeError('диапазон классов: начальное значение не может быть больше конечного значения');
       }
       
       let startStr: string = start.toString();
@@ -227,7 +227,7 @@ export function trigger(start: number, end: number) {
       let commonPrefixSubstr: string = '';
       
       // Если строки имеют одинаковую длину, мы хотим удалить все общие
-      // префикс перед вычислением остальной части диапазона
+      // префиксы перед вычислением остальной части диапазона
       if (start !== end && startStr.length > 1 && sameLength(startStr, endStr)) {
         commonPrefixSubstr = getCommonPrefixSubstrFrom(startStr, endStr);
         startStr = startStr.replace(commonPrefixSubstr, '');
@@ -299,9 +299,9 @@ export function trigger(start: number, end: number) {
       return true;
     }
     
-    // Вся цифра здесь относится к левому значащему числу как к чему угодно
+    // Все цифры здесь относится к левому значащему числу как к чему угодно
     // от 1 до 9, в то время как остальные числа равны 0
-    // должно быть не менее 19 лет и старше
+    // должно быть не менее 19 и выше
     //
     // Для цифры минус один:
     //
@@ -351,7 +351,7 @@ export function trigger(start: number, end: number) {
         counter++;
       }
       
-    // Превратить в цельную фигуру  
+    // Превратить в цельное число
       startCheck = Math.ceil(startCheck);
       
       while (counter > 0) {
@@ -371,7 +371,7 @@ export function trigger(start: number, end: number) {
         counter++;
       }
       
-        // Превратить в цельную фигуру
+      // Превратить в цельное число
       check = Math.floor(check);
       
       while (counter > 0) {
