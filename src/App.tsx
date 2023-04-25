@@ -11,7 +11,7 @@ function App() {
 
   const handleCheck = () => {
     try {
-      if (start || end) {
+      if (start && end) {
         const value = trigger(+start, +end)
         setResult(value)
       }
