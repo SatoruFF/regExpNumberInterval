@@ -1,41 +1,50 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.wrapper {
+  font-family: 'Sono', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content {
+  width: 80%;
+  height: 80%;
+  border-radius: 15px;
+  background-color: #434343;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.title {
+  font-size: 24px;
 }
 
-.card {
-  padding: 2em;
+.input {
+  margin-top: 10px;
 }
 
-.read-the-docs {
-  color: #888;
+.result {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 6px;
+  height: 20%;
+  min-width: 80%;
+  max-width: 90%;
+  overflow: scroll;
+  word-wrap: break-word;
 }
